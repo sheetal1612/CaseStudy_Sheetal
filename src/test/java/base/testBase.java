@@ -10,7 +10,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 public class testBase {
 	
 	private static testBase base;
-	private static WebDriver driver;
+	public static WebDriver driver;
 	
 	private testBase() {
 		String browserName="chrome";

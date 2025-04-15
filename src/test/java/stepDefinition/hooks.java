@@ -3,6 +3,7 @@ package stepDefinition;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 
 import base.testBase;
 import io.cucumber.java.After;
@@ -21,7 +22,7 @@ public class hooks {
 	@After
 	public void screenshots(Scenario scenario) {
 		if(scenario.isFailed()) {
-		TakesScreenshot ss=(TakesScreenshot)driver;
+		TakesScreenshot ss=(TakesScreenshot)testBase.getDriver();
 		byte[] img=ss.getScreenshotAs(OutputType.BYTES);
 		scenario.attach(img, "image/png", "FailedScenarioScreenshots");
 		}

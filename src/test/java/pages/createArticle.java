@@ -15,7 +15,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class createArticle {
-	
+	WebDriver driver;
 	
 	@FindBy(xpath="//*[text()='New Article']")
 	WebElement lnkNewArticle;
@@ -38,8 +38,13 @@ public class createArticle {
 	@FindBy(xpath="//*[@class='article-actions']")
 	WebElement isArticleCreated;
 	
+	@FindBy(xpath="//*[text()='Title already exists.. ']")
+	WebElement articleAlreadyExist;
+	
+	
 
 	public createArticle(WebDriver driver) {
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -50,29 +55,27 @@ public class createArticle {
 	}
 
 	
-	public void enterValues(String title, String about, String desc, WebDriver driver) throws InterruptedException {
+	public void enterValues(String title, String about, String desc, String tag) throws InterruptedException {
 		JavascriptExecutor js=(JavascriptExecutor) driver;
 		Actions aa=new Actions(driver);
-		//txtArticleTitle.clear();
 		txtArticleTitle.sendKeys(title);
 		Thread.sleep(2000);
-		//aa.moveToElement(txtArticleAbout).build().perform();
-//		txtArticleAbout.clear();
-//		js.executeScript("arguments[0].value='"+ about +"';",txtArticleAbout);
 		txtArticleAbout.sendKeys(about);
 		Thread.sleep(2000);
 		txtArticleDescription.clear();
-		//aa.moveToElement(txtArticleDescription).build().perform();
-		//js.executeScript("arguments[0].value='"+ desc +"';",txtArticleDescription);
 		txtArticleDescription.sendKeys(desc);
 		Thread.sleep(2000);
-		txtArticletags.sendKeys("check");
+		txtArticletags.sendKeys(tag);
 		btnPublishArticle.click();
 		Thread.sleep(2000);
 	}
 
 public void isArticleCreated() {
 	Assert.assertTrue(isArticleCreated.isDisplayed());
+}
+
+public void isArticleCreatedIfAlreadyExist() {
+	Assert.assertEquals(articleAlreadyExist.getText(), "Title already exists..");
 }
 
 }

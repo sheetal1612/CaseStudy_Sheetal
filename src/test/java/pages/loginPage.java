@@ -8,7 +8,7 @@ import org.testng.Assert;
 
 public class loginPage {
 	
-	@FindBy(className="ion-log-in")
+	@FindBy(xpath="//a[text()='Login']")
 	WebElement btnLogin;
 	
 	@FindBy(name="email")

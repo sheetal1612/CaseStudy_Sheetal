@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 public class deleteArticlePage {
-	
+	WebDriver driver;
 	@FindBy(xpath="//*[text()='Home']")
 	WebElement lnkHome;
 	
@@ -28,10 +28,11 @@ public class deleteArticlePage {
 	
 	
 	public deleteArticlePage(WebDriver driver) {
+		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 
-public void deleteArticle(String updatedValue1, WebDriver driver) throws InterruptedException {
+public void deleteArticle(String updatedValue1) throws InterruptedException {
 	updatedValue=updatedValue1;
 	WebElement ele=driver.findElement(By.xpath("//h1[contains(text(),'"+updatedValue+"')]"));
 	JavascriptExecutor js= (JavascriptExecutor) driver;
