@@ -59,15 +59,11 @@ public class createArticle {
 		JavascriptExecutor js=(JavascriptExecutor) driver;
 		Actions aa=new Actions(driver);
 		txtArticleTitle.sendKeys(title);
-		Thread.sleep(2000);
 		txtArticleAbout.sendKeys(about);
-		Thread.sleep(2000);
 		txtArticleDescription.clear();
 		txtArticleDescription.sendKeys(desc);
-		Thread.sleep(2000);
 		txtArticletags.sendKeys(tag);
 		btnPublishArticle.click();
-		Thread.sleep(2000);
 	}
 
 public void isArticleCreated() {

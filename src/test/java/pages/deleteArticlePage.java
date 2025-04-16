@@ -12,11 +12,6 @@ import org.testng.Assert;
 
 public class deleteArticlePage {
 	WebDriver driver;
-	@FindBy(xpath="//*[text()='Home']")
-	WebElement lnkHome;
-	
-	@FindBy(xpath="//*[text()='Global Feed']")
-	WebElement btnGlobalFeed;
 	
 	@FindBy(xpath="(//*[text()=' Delete Article'])[2]")
 	WebElement btnDeleteArticle;
@@ -42,7 +37,6 @@ public void deleteArticle(String updatedValue1) throws InterruptedException {
 	btnDeleteArticle.click();
 	Thread.sleep(2000);
 	driver.switchTo().alert().accept();
-	Thread.sleep(2000);
 }
 
 public void isArticleDeleted() {

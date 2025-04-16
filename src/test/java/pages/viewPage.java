@@ -26,17 +26,14 @@ public class viewPage {
 
 public static String value="";
 public void clickGlobalFeed() throws InterruptedException {
-	Thread.sleep(2000);
 	JavascriptExecutor js= (JavascriptExecutor) driver;
 	js.executeScript("arguments[0].setAttribute('style','border:solid 2px red')", lnkHome);
 	lnkHome.click();
-	Thread.sleep(2000);
 	js.executeScript("arguments[0].setAttribute('style','border:solid 2px red')", btnGlobalFeed);
 	btnGlobalFeed.click();
 }
 
 public void selectArticle(String value1) throws InterruptedException {
-	Thread.sleep(2000);
 	value=value1;
 	WebElement ele=driver.findElement(By.xpath("//h1[contains(text(),'"+value+"')]"));
 	JavascriptExecutor js= (JavascriptExecutor) driver;

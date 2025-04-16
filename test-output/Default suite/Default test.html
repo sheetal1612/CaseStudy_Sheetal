@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Apr 15 17:59:36 IST 2025</td>
+<td>Started on:</td><td>Wed Apr 16 11:27:24 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>62 seconds (62931 ms)</td>
+<tr><td>Total time:</td><td>46 seconds (46160 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,83 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.runner.runScenario()'><b>runScenario</b><br>Test class: runner.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Create new Article with existing title(Negative Scenario)", "Case Study"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;article-actions&apos;]&quot;}
+  (Session info: chrome=135.0.7049.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4bfcbf10a21f4c95d4a4d4397afbf628, findElement {using=xpath, value=//*[@class=&apos;article-actions&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.95 (de2eb485a195..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50729}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50729/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4bfcbf10a21f4c95d4a4d4397afbf628
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.isDisplayed(Unknown Source)
+	at pages.createArticle.isArticleCreated(createArticle.java:70)
+	at stepDefinition.articleStepDef.user_should_be_able_to_create_article_sucessfully(articleStepDef.java:73)
+	at ✽.Article must be created(file:///C:/SheetalChaudhary/workspace/CaseStudySheetal/./src/test/resources/Features/createArticle.feature:21)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1961510626", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1961510626'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;article-actions&apos;]&quot;}
+  (Session info: chrome=135.0.7049.85)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4bfcbf10a21f4c95d4a4d4397afbf628, findElement {using=xpath, value=//*[@class=&apos;article-actions&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.85, chrome: {chromedriverVersion: 135.0.7049.95 (de2eb485a195..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50729}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50729/devtoo..., se:cdpVersion: 135.0.7049.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4bfcbf10a21f4c95d4a4d4397afbf628
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.isDisplayed(Unknown Source)
+	at pages.createArticle.isArticleCreated(createArticle.java:70)
+	at stepDefinition.articleStepDef.user_should_be_able_to_create_article_sucessfully(articleStepDef.java:73)
+	at ✽.Article must be created(file:///C:/SheetalChaudhary/workspace/CaseStudySheetal/./src/test/resources/Features/createArticle.feature:21)
+</pre></div></td>
+<td>17</td>
+<td>runner.runner@2ab4bc72</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -78,17 +155,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='runner.runner.runScenario()'><b>runScenario</b><br>Test class: runner.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Create new Article", "Case Study"</td>
 <td></td>
-<td>11</td>
-<td>runner.runner@2ab4bc72</td></tr>
-<tr>
-<td title='runner.runner.runScenario()'><b>runScenario</b><br>Test class: runner.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update an Article", "Case Study"</td>
-<td></td>
-<td>10</td>
-<td>runner.runner@2ab4bc72</td></tr>
-<tr>
-<td title='runner.runner.runScenario()'><b>runScenario</b><br>Test class: runner.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete an Article", "Case Study"</td>
-<td></td>
-<td>19</td>
+<td>3</td>
 <td>runner.runner@2ab4bc72</td></tr>
 <tr>
 <td title='runner.runner.runScenario()'><b>runScenario</b><br>Test class: runner.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login into App", "Case Study"</td>
@@ -96,14 +163,19 @@ function toggleAllBoxes() {
 <td>1</td>
 <td>runner.runner@2ab4bc72</td></tr>
 <tr>
-<td title='runner.runner.runScenario()'><b>runScenario</b><br>Test class: runner.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View Article", "Case Study"</td>
+<td title='runner.runner.runScenario()'><b>runScenario</b><br>Test class: runner.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update an Article", "Case Study"</td>
 <td></td>
-<td>6</td>
+<td>2</td>
 <td>runner.runner@2ab4bc72</td></tr>
 <tr>
-<td title='runner.runner.runScenario()'><b>runScenario</b><br>Test class: runner.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Create new Article with existing title(Negative Scenario)", "Case Study"</td>
+<td title='runner.runner.runScenario()'><b>runScenario</b><br>Test class: runner.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View Article", "Case Study"</td>
 <td></td>
-<td>10</td>
+<td>0</td>
+<td>runner.runner@2ab4bc72</td></tr>
+<tr>
+<td title='runner.runner.runScenario()'><b>runScenario</b><br>Test class: runner.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete an Article", "Case Study"</td>
+<td></td>
+<td>17</td>
 <td>runner.runner@2ab4bc72</td></tr>
 </table><p>
 </body>

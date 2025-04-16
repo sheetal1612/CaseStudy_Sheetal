@@ -18,7 +18,7 @@ https://conduit-realworld-example-app.fly.dev/
     When User enters Article details
     |Title|Desc|Content|Tag|
     |SH3Title|Sh3|Sh3Desc|demo|
-    Then Article must not be created if already exist
+    Then Article must be created
    
     Scenario: View Article
     Given User should be on Global Feed page

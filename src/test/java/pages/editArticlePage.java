@@ -12,12 +12,6 @@ import org.testng.Assert;
 
 public class editArticlePage {
 	WebDriver driver;
-	
-	@FindBy(xpath="//*[text()='Home']")
-	WebElement lnkHome;
-	
-	@FindBy(xpath="//*[text()='Global Feed']")
-	WebElement btnGlobalFeed;
 
 	@FindBy(xpath="(//*[text()=' Edit Article'])[2]")
 	WebElement btnEditArticle;
@@ -49,31 +43,18 @@ public class editArticlePage {
 public void editArticle(String value1, String updatedValue1) throws InterruptedException {
 	value=value1;
 	updatedValue=updatedValue1;
-	Thread.sleep(2000);
 	WebElement ele=driver.findElement(By.xpath("//h1[contains(text(),'"+value+"')]"));
 	JavascriptExecutor js= (JavascriptExecutor) driver;
 	js.executeScript("arguments[0].setAttribute('style','border:solid 2px red')", ele);
 	driver.findElement(By.xpath("//h1[contains(text(),'"+value+"')]")).click();
 	btnEditArticle.click();
 	txtArticleTitle.clear();
-	Thread.sleep(2000);
 	txtArticleTitle.sendKeys(updatedValue);
-	Thread.sleep(2000);
 	js.executeScript("arguments[0].setAttribute('style','border:solid 2px red')", btnUpdateArticle);
 	btnUpdateArticle.click();
 	Thread.sleep(2000);
 }
 
-
-public void clickGlobalFeed() throws InterruptedException {
-	Thread.sleep(2000);
-	JavascriptExecutor js= (JavascriptExecutor) driver;
-	js.executeScript("arguments[0].setAttribute('style','border:solid 2px red')", lnkHome);
-	lnkHome.click();
-	Thread.sleep(2000);
-	js.executeScript("arguments[0].setAttribute('style','border:solid 2px red')", btnGlobalFeed);
-	btnGlobalFeed.click();
-}
 public void clickOnEditButton() {
 	btnEditArticle.click();
 }
@@ -82,7 +63,6 @@ public void clickOnEditButton() {
 public void isArticleUpdated() throws InterruptedException {
 	String valueAfterUpdate=updatedArticle.getText().trim();
 	Assert.assertEquals(updatedValue, valueAfterUpdate);
-	Thread.sleep(2000);
 	
 }
 
